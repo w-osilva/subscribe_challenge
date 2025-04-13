@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../environment'
+
+ReceiptGenerator::PrintGreetingCommand.execute
+command_2 = ReceiptGenerator::FetchProductsCommand.execute
+ReceiptGenerator::PrintReceiptCommand.execute(command_2.products)
