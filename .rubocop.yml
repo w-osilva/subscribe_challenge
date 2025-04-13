@@ -1,0 +1,31 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  TargetRubyVersion: 3.4.2
+  Exclude:
+    - 'bin/*'
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+Layout/LineLength:
+  Max: 120
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 50
+  Exclude:
+    - 'spec/**/*'
+Metrics/ClassLength:
+  Max: 150
+Metrics/MethodLength:
+  Max: 50
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
