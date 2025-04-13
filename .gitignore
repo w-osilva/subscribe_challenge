@@ -1,0 +1,11 @@
+/.bundle
+.rspec_status
+
+# OS files
+.DS_Store
+**.DS_Store
+
+# IDE files
+/.idea
+/.vscode
+/.ruby-lsp
