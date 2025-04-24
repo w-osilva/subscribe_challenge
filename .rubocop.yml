@@ -3,7 +3,8 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 3.4.2
   Exclude:
-    - 'bin/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
 
 Layout/EndOfLine:
   EnforcedStyle: lf

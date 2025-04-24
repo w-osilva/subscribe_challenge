@@ -12,12 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      # Add or replace dependency steps here
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      # Add or replace test runners here
       - name: Rspec
         run: bundle exec rspec
 
@@ -26,11 +24,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      # Add or replace dependency steps here
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      # Add or replace any other lints here
       - name: Rubocop
         run: bundle exec rubocop
