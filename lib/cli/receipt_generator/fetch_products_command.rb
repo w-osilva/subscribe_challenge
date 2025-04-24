@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ReceiptGenerator
-  class FetchProductsCommand < BaseCommand
+  class FetchProductsCommand < Command
     INVALID_INPUT_MESSAGE = <<~TEXT
       Please enter a valid item description following the format: '{quantity} {item} at {price}'
     TEXT
@@ -15,9 +15,8 @@ module ReceiptGenerator
     end
 
     def execute
-      execution do
-        fetch_user_inputs
-      end
+      fetch_user_inputs
+      self
     end
 
     private

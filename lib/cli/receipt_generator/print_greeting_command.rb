@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ReceiptGenerator
-  class PrintGreetingCommand < BaseCommand
+  class PrintGreetingCommand < Command
     GREETING = <<~TEXT.freeze
       Please enter the items you want to add to your receipt. Press 'Enter' when you are finished.
 
@@ -11,9 +11,8 @@ module ReceiptGenerator
     TEXT
 
     def execute
-      execution do
-        puts GREETING
-      end
+      puts GREETING
+      self
     end
   end
 end

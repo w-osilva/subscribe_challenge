@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ReceiptGenerator
-  class PrintReceiptCommand < BaseCommand
+  class PrintReceiptCommand < Command
     attr_reader :receipt, :products
 
     def initialize(products)
@@ -11,10 +11,8 @@ module ReceiptGenerator
 
     def execute
       @receipt = Receipt.new(products: products)
-
-      execution do
-        print_receipt
-      end
+      print_receipt
+      self
     end
 
     private

@@ -8,4 +8,5 @@ loader = Zeitwerk::Loader.new
 loader.push_dir('lib')
 loader.collapse('lib/cli')
 loader.collapse('lib/models')
+loader.collapse('lib/services')
 loader.setup
